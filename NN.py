@@ -5,7 +5,13 @@ from tensorflow import keras
 
 ####################################### Preparing data
 
+path="C:/Users/vanes/OneDrive - Universitat de Barcelona/8e semestre/ML-EELS/"
 
+ds = path + '/Mn_Fe_dataset.pkl'
+lb = path + '/Mn_Fe_labels.pkl'
+
+ds = pd.read_pickle(ds)
+lb = pd.read_pickle(lb)
 
 ####################################### Defining the model
 
