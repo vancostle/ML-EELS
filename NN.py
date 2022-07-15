@@ -27,11 +27,9 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.35, rand
 model = keras.Sequential([                                
     keras.layers.Dense(1200, activation='relu', input_shape=(X_train.shape[1],)),          
     keras.layers.Dropout(0.7),
-    keras.layers.Dense(1200/(2*(1200+1+1))),
+    keras.layers.Dense((600/2), activation='relu'),
     keras.layers.Dropout(0.7),
-    keras.layers.Dense(1200/(2*(1200+2+1))),
-    keras.layers.Dropout(0.7),
-    keras.layers.Dense(1200/(2*(1200+3+1))),
+    keras.layers.Dense((600/3), activation='relu'),
     keras.layers.Dropout(0.7),
     keras.layers.Dense(5, activation='softmax')
 ])
